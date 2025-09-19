@@ -1,0 +1,1 @@
+du -sh --exclude=node_modules --exclude=older --exclude=resources * | tee /dev/tty | awk '{print $1}' | numfmt --from=iec | awk '{sum+=$1} END {print sum}' | numfmt --to=iec | awk '{print "Total:", $1, "bytes"}'

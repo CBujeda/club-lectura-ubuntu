@@ -1,0 +1,26 @@
+{
+  "name": "Club Lectura Ubuntu",
+  "version": "1.0.0",
+  "description": "The web of Club Lectura Ubuntu",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install @11ty/eleventy --save-dev",
+    "start": "npx @11ty/eleventy --serve --port=3000",
+    "clean": "rmdir /s /q docs && mkdir docs",
+    "deploy": "npx @11ty/eleventy --pathprefix=/",
+    "deploy_-subdomain": "npx @11ty/eleventy --pathprefix=/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CBujeda/club-lectura-ubuntu.git"
+  },
+  "author": "Clara Bujeda Muñoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CBujeda/club-lectura-ubuntu/issues"
+  },
+  "homepage": "https://github.com/CBujeda/club-lectura-ubuntu#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

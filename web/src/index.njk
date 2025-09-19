@@ -1,0 +1,211 @@
+<!--
+  Plantilla completa para la página de inicio del Club de Lectura Ubuntu.
+  Incluye Bootstrap 5.3.8 para un diseño responsivo y secciones
+  para la bienvenida, información del club, libros leídos y noticias.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Club de Lectura Ubuntu - EINA</title>
+
+    <!-- Enlaces de Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Estilos CSS personalizados -->
+    <style>
+        .hero-section {
+            background: url('https://via.placeholder.com/1920x1080.png?text=Imagen+de+Bienvenida') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .card-img-top {
+            height: 200px; /* Tamaño fijo para las imágenes de los libros */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Club Ubuntu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#libros-leidos">Libros Leídos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sesiones-lectura.html">Sesiones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-lg-3" href="/inscripcion.html">Inscribirse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Bienvenida (Hero) -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-3 fw-bold">Club de Lectura Ubuntu</h1>
+            <p class="lead">"I am because we are"</p>
+            <a href="#info-club" class="btn btn-primary btn-lg mt-3">Saber más</a>
+        </div>
+    </header>
+
+    <!-- Información del Club -->
+    <section id="info-club" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100 shadow-sm">
+                        <h5 class="card-title fw-bold">¿Qué es el Club?</h5>
+                        <p class="card-text">
+                            Basado en la filosofía africana de cuidarse en comunidad, el Club Ubuntu es un espacio de debate, reflexión y crecimiento a través de la lectura.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100 shadow-sm">
+                        <h5 class="card-title fw-bold">Beneficios</h5>
+                        <p class="card-text">
+                            Participa en presencia o en línea y obtén hasta 1 crédito ECTS por tu implicación. ¡Una forma perfecta de aprender y crecer!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4 h-100 shadow-sm">
+                        <h5 class="card-title fw-bold">¿Cómo Unirse?</h5>
+                        <p class="card-text">
+                            Es muy sencillo. Consulta nuestras próximas sesiones, echa un vistazo a los libros disponibles en la biblioteca y ¡únete a la conversación!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Últimos Libros Leídos -->
+    <section id="libros-leidos" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Últimos libros leídos</h2>
+            <div class="row">
+                <!-- Tarjeta 1 (Puedes duplicar este bloque para más libros) -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250.png?text=Portada+del+libro+1" class="card-img-top" alt="Portada del libro 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro 1</h5>
+                            <p class="card-text"><small class="text-muted">Autor del libro</small></p>
+                            <a href="#" class="btn btn-primary">Ver reseña</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250.png?text=Portada+del+libro+2" class="card-img-top" alt="Portada del libro 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro 2</h5>
+                            <p class="card-text"><small class="text-muted">Autor del libro</small></p>
+                            <a href="#" class="btn btn-primary">Ver reseña</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/400x250.png?text=Portada+del+libro+3" class="card-img-top" alt="Portada del libro 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro 3</h5>
+                            <p class="card-text"><small class="text-muted">Autor del libro</small></p>
+                            <a href="#" class="btn btn-primary">Ver reseña</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Últimas Noticias -->
+    <section id="ultimas-noticias" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Últimas noticias</h2>
+            <div class="row">
+                <!-- Noticia 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Próxima Sesión: El alquimista</h5>
+                            <p class="card-text">
+                                La 7ª sesión se celebrará el 26 de septiembre de 2025 a las 13h. Modalidad presencial y online. ¡Te esperamos!
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Noticia 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuevo libro disponible</h5>
+                            <p class="card-text">
+                                Ya puedes encontrar varios ejemplares de nuestra próxima lectura, El alquimista, en la biblioteca Hypatia.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 Club de Lectura Ubuntu | EINA</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap 5.3.8 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
