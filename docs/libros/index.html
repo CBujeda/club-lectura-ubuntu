@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Ubuntu</title>
+    <meta name="description" content="">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" sizes="256x256" href="/assets/img/favicon/favicon256I.ico">
+
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/books.css">
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Club Ubuntu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/libros">Libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/sesiones-lectura">Sesiones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-lg-3" href="/inscripcion">Inscribirse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+
+
+   <!-- Barra de búsqueda para MÓVIL (visible solo en dispositivos pequeños) -->
+    <div class="container d-md-none mt-3">
+        <h4 class="mb-3 text-center">Buscar Libro</h4>
+        <div class="input-group mb-3 shadow-sm">
+            <input type="text" id="searchInput" class="form-control rounded-pill ps-3" placeholder="Buscar por título o autor..." aria-label="Buscar libros">
+        </div>
+    </div>
+
+    <!-- Contenido principal con barra lateral (Usando flexbox de Bootstrap) -->
+    <div class="d-flex flex-grow-1">
+        <!-- Barra lateral de búsqueda (Sticky y oculta en móvil) -->
+        <aside class="d-none d-md-block bg-light p-4 border-end" style="width: 300px; position: sticky; top: 56px; height: calc(100vh - 56px); z-index: 1020;">
+            <h4 class="mb-4">Buscar Libro</h4>
+            <div class="input-group mb-3 shadow-sm">
+                <input type="text" id="searchInput" class="form-control rounded-pill ps-3" placeholder="Buscar por título o autor..." aria-label="Buscar libros">
+            </div>
+            <p><small class="text-muted">Desliza para ver más libros.</small></p>
+        </aside>
+
+        <!-- Contenedor de la lista de libros -->
+        <div class="flex-grow-1 p-4">
+            <h1 class="text-center my-4">Libros Leídos</h1>
+            <p class="text-center text-muted mb-5">Explora el historial de libros leídos y debatidos por el Club Ubuntu.</p>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="book-list">
+                <!-- Ejemplo de tarjeta de libro con el efecto 3D -->
+                <div class="col book-card" data-title="El alquimista" data-author="Paulo Coelho">
+                    <div class="card h-100 shadow-sm text-center border-0 rounded-3">
+                        <div class="d-flex justify-content-center">
+                            <a class="book-container mt-4" href="https://ejemplo.com/libro-alquimista" target="_blank" rel="noopener noreferrer">
+                                <div class="book">
+                                    <img alt="Portada de El alquimista" src="https://placehold.co/200x300/e9d8a3/010101?text=El+alquimista" class="img-fluid" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mt-3">El alquimista</h5>
+                            <p class="card-text"><small class="text-muted">Paulo Coelho</small></p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary tag">Ficción</span>
+                                <span class="badge bg-secondary tag">Filosofía</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más ejemplos de tarjetas -->
+                <div class="col book-card" data-title="El hombre en busca de sentido" data-author="Viktor E. Frankl">
+                    <div class="card h-100 shadow-sm text-center border-0 rounded-3">
+                        <div class="d-flex justify-content-center">
+                            <a class="book-container mt-4" href="https://ejemplo.com/libro-sentido" target="_blank" rel="noopener noreferrer">
+                                <div class="book">
+                                    <img alt="Portada de El hombre en busca de sentido" src="https://placehold.co/200x300/8d8a8b/010101?text=Sentido" class="img-fluid" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mt-3">El hombre en busca de sentido</h5>
+                            <p class="card-text"><small class="text-muted">Viktor E. Frankl</small></p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary tag">No Ficción</span>
+                                <span class="badge bg-secondary tag">Psicología</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col book-card" data-title="Invisible" data-author="Eloy Moreno">
+                    <div class="card h-100 shadow-sm text-center border-0 rounded-3">
+                        <div class="d-flex justify-content-center">
+                            <a class="book-container mt-4" href="https://ejemplo.com/libro-invisible" target="_blank" rel="noopener noreferrer">
+                                <div class="book">
+                                    <img alt="Portada de Invisible" src="https://placehold.co/200x300/a7a7a7/010101?text=Invisible" class="img-fluid" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mt-3">Invisible</h5>
+                            <p class="card-text"><small class="text-muted">Eloy Moreno</small></p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary tag">Ficción</span>
+                                <span class="badge bg-secondary tag">Juvenil</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col book-card" data-title="La revolución emocional" data-author="Inma Puig Santos">
+                    <div class="card h-100 shadow-sm text-center border-0 rounded-3">
+                        <div class="d-flex justify-content-center">
+                            <a class="book-container mt-4" href="https://ejemplo.com/libro-emocional" target="_blank" rel="noopener noreferrer">
+                                <div class="book">
+                                    <img alt="Portada de La revolución emocional" src="https://placehold.co/200x300/c7a7a7/010101?text=Revolución+emocional" class="img-fluid" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mt-3">La revolución emocional</h5>
+                            <p class="card-text"><small class="text-muted">Inma Puig Santos</small></p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary tag">Psicología</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col book-card" data-title="12 reglas para vivir" data-author="Jordan B. Peterson">
+                    <div class="card h-100 shadow-sm text-center border-0 rounded-3">
+                        <div class="d-flex justify-content-center">
+                            <a class="book-container mt-4" href="https://ejemplo.com/libro-reglas" target="_blank" rel="noopener noreferrer">
+                                <div class="book">
+                                    <img alt="Portada de 12 reglas para vivir" src="https://placehold.co/200x300/8d689b/010101?text=12+Reglas" class="img-fluid" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mt-3">12 reglas para vivir</h5>
+                            <p class="card-text"><small class="text-muted">Jordan B. Peterson</small></p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary tag">No Ficción</span>
+                                <span class="badge bg-secondary tag">Autoayuda</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Script para la búsqueda -->
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const query = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.book-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const author = card.querySelector('.card-text').textContent.toLowerCase();
+
+                if (title.includes(query) || author.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <footer class="footer bg-dark text-white py-4 mt-5" id="footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p>&copy; 2025 Club de Lectura Ubuntu | EINA</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-inline mb-0 text-center text-md-end">
+
+                    <li class="list-inline-item">
+                        <a rel="me" href="#" target="_blank" class="text-white text-decoration-none">
+                            Biblioteca
+                        </a>
+                    </li>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

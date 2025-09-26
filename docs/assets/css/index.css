@@ -1,7 +1,7 @@
 .hero-section {
-    background: url('/assets/img/inicio.png') no-repeat center center;
+    background: url('https://via.placeholder.com/1920x1080.png?text=Imagen+de+Bienvenida') no-repeat center center;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     color: white;
     display: flex;
     align-items: center;
@@ -17,9 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /*
     background-color: rgba(0, 0, 0, 0.5);
-    */
 }
 
 .hero-content {

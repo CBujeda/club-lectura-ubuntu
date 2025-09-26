@@ -1,0 +1,1 @@
+// Este archivo se ejecutará en un entorno aislado.
